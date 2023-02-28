@@ -50,6 +50,7 @@
             color: #fff;
             border-radius: 8px;
             border: none;
+            font-size: 1.0em;
         }
     </style>
 </head>
@@ -61,9 +62,8 @@
             <p>Enter a number from the choices below</p>
             <p>1. Add an Item</p>
             <p>2. Delete an Item</p>
-            <p>3. List the Items</p>
-            <p>4. Exit the Program</p>
-            <p><input type='number' name='action' min='1' max='4'></p>
+            <p>3. Exit the Program</p>
+            <p><input type='number' name='action' min='1' max='3'></p>
             <p>Item to be insert: <input type='text' name='item' placeholder="Item Name" ></p>
             <%--     <p>ID: <input title="ID for item to be deleted" type="text" placeholder="ID for item to be deleted"> </p> --%>
             <p>ID: <input title="ID for item to be deleted" type="text" name="id" placeholder="ID for item to be deleted"> </p>
