@@ -41,7 +41,7 @@ public class ItemsController extends HttpServlet {
             case "list":
                 listItems(req, resp);
                 break;
-            case "4":
+            case "Exit":
                 resp.sendRedirect(req.getContextPath() + "/");
                 break;
             default:
@@ -112,7 +112,7 @@ public class ItemsController extends HttpServlet {
             resp.sendRedirect(req.getContextPath() + "/items?action=delete&id=" + req.getParameter("id"));
             return;
         }
-        else if("4".equals(action))
+        else if("3".equals(action))
         {
             resp.sendRedirect(req.getContextPath() + "/");
             return;
