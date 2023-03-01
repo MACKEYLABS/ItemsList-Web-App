@@ -105,19 +105,19 @@ public class ItemsController extends HttpServlet {
             } finally {
                 entityManager.close();
             }
-        }
-
-        else if("2".equals(action))
-        {
+        } else if ("2".equals(action)) {
             resp.sendRedirect(req.getContextPath() + "/items?action=delete&id=" + req.getParameter("id"));
             return;
-        }
-        else if("3".equals(action))
-        {
+        } else if ("3".equals(action)) {
             resp.sendRedirect(req.getContextPath() + "/");
             return;
         }
         resp.sendRedirect(req.getContextPath() + "/items?action=list");
+    }
+
+    @Override
+    public void destroy() {
+        entityManagerFactory.close();
     }
 }
 
