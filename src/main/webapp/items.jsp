@@ -99,16 +99,16 @@
 <div class="container">
     <div>
         <form method="POST" action="items">
-            <p>Enter a number from the choices below</p>
-            <input type='number' name='action' min='1' max='3' placeholder="Choose an action" >
-            <input type='text' name='item' placeholder="Item Name" >
-            <p>ID: <input title="ID for item to be deleted" type="text" name="id" placeholder="ID for item to be deleted"> </p>
+
+            <p>1: Add 2: Delete 3: Exit <input type='number' name='action' min='1' max='3' placeholder="Choose an action" > </p>
+            <p>Input Item: (Add Only) <input type='text' name='item' placeholder="Item Name" > </p>
+            <p>ID #: (Deletion Only) <input title="ID for item to be deleted" type="text" name="id" placeholder="Item ID # for deletion"> </p>
 
             <p><input type='submit' value='Submit'></p>
         </form>
     </div>
     <table align="left" border="1">
-        <caption align="center">All Items</caption>
+        <caption align="center">Item List</caption>
         <thead>
         <tr>
             <th>ID</th>

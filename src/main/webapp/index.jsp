@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Welcome to my Item List Program</title>
+    <title>Item List Program</title>
     <style>
         h1 {
             text-align: center;
@@ -24,7 +24,7 @@
     </style>
 </head>
 <body>
-<h1>Welcome to MackeyLab's Item List Program</h1>
+<h1>Welcome to the Item List Program</h1>
 <form action="/ItemListWebApp_war_exploded/items">
     <button type="submit">Enter</button>
 </form>
