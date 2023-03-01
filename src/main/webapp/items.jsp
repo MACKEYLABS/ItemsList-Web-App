@@ -7,51 +7,91 @@
     <meta charset="UTF-8">
     <title>Things List Program</title>
     <style type="text/css">
+        body {
+            font-family: sans-serif;
+            font-size: 1rem;
+        }
+
         .container {
             display: flex;
             flex-direction: row;
             width: 100%;
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 2rem;
+            box-sizing: border-box;
         }
 
         .container div {
             flex: 2 1 auto;
         }
 
-        .container table{
-            flex: 2 1 auto;
+        .container form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+            box-sizing: border-box;
+            background-color: #f8f8f8;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
 
-        div {
-
+        .container form p {
+            margin: 0;
+            padding: 1rem 0;
         }
 
-        form {
-            font-size: 1.5rem;
-        }
-
-        table {
-            margin-top: 20px;
-            font-size: 1.4rem;
-            border-collapse: collapse;
-            margin-left: 3rem;
-        }
-
-        input[type="text"] {
-            padding: 10px;
+        .container form input[type="number"],
+        .container form input[type="text"] {
+            padding: 1rem;
             border-radius: 5px;
             font-size: 1rem;
+            border: 1px solid #ccc;
+            margin-bottom: 1rem;
+            width: 100%;
+            box-sizing: border-box;
         }
 
-        input[type="submit"] {
-            width: 150px;
+        .container form input[type="submit"] {
+            width: 100%;
             height: 40px;
             padding: 5px;
             background-color: #008CBA;
             color: #fff;
             border-radius: 8px;
             border: none;
-            font-size: 1.0em;
+            font-size: 1rem;
+            cursor: pointer;
         }
+
+        table {
+            margin-top: 2rem;
+            font-size: 1rem;
+            border-collapse: collapse;
+            margin-left: 3rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        table th,
+        table td {
+            padding: 0.5rem;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+
+        table tbody tr:nth-child(even) {
+            background-color: #f8f8f8;
+        }
+
+        table caption {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
     </style>
 </head>
 <body>
@@ -60,12 +100,8 @@
     <div>
         <form method="POST" action="items">
             <p>Enter a number from the choices below</p>
-            <p>1. Add an Item</p>
-            <p>2. Delete an Item</p>
-            <p>3. Exit the Program</p>
-            <p><input type='number' name='action' min='1' max='3'></p>
-            <p>Item to be insert: <input type='text' name='item' placeholder="Item Name" ></p>
-            <%--     <p>ID: <input title="ID for item to be deleted" type="text" placeholder="ID for item to be deleted"> </p> --%>
+            <input type='number' name='action' min='1' max='3' placeholder="Choose an action" >
+            <input type='text' name='item' placeholder="Item Name" >
             <p>ID: <input title="ID for item to be deleted" type="text" name="id" placeholder="ID for item to be deleted"> </p>
 
             <p><input type='submit' value='Submit'></p>
